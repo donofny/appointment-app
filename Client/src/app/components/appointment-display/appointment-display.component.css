@@ -1,0 +1,53 @@
+.btn {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 95px;
+  border: none;
+  background-color: black;
+  cursor: pointer;
+  text-align: center;
+}
+.appointment {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+.appointment-holder {
+  padding-left: 10px;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.buttonHolder {
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  font-size: large;
+  transition: all 200ms ease;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+.buttonHolder:hover {
+  transform: scale(1.5);
+}
+table,
+th,
+td {
+  padding: 8px;
+  border: 1px solid black;
+  font-size: medium;
+  text-align: center;
+}
+h3 {
+  padding-bottom: 15px;
+}

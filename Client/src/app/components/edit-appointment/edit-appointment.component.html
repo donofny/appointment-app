@@ -1,0 +1,8 @@
+<div class="edit-appt-div">
+  <h3> Edit Your Appointment -</h3>
+  <app-add-appointment
+    *ngIf="appointment"
+    [appointment]="appointment"
+    (onEditAppointment)="onEdit($event)"
+  ></app-add-appointment>
+</div>

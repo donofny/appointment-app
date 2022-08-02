@@ -1,0 +1,37 @@
+<button type="button" class="btn" (click)="isCalendarView=!isCalendarView">Table/Calendar View</button>
+<h3>Your Appointments - Click on an appointment row to edit</h3>
+<div class="appointment-holder">
+  <ng-container *ngIf="isCalendarView == false">
+    <table style="width: 100%">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Duration</th>
+        <th>Start Time</th>
+        <th>Created</th>
+        <th>Last Editted</th>
+      </tr>
+      <tr
+        *ngFor="let appointment of appointmentList"
+        [routerLink]="[appointment.id]"
+      >
+        <td>{{ appointment.name }}</td>
+        <td>{{ appointment.description }}</td>
+        <td>{{ appointment.duration }} minutes</td>
+        <td>{{ startFormat(appointment) }}</td>
+        <td>{{ createdFormat(appointment) }}</td>
+        <td>{{ lastChangedFormat(appointment) }}</td>
+        <td class="buttonHolder" (click)="deleteAppointment(appointment, $event)">
+          <fa-icon
+            [ngStyle]="{ color: 'red' }"
+            [icon]="faTimes"
+          >
+          </fa-icon>
+        </td>
+      </tr>
+    </table>
+  </ng-container>
+  <ng-container *ngIf="isCalendarView">
+    <app-appointment-calendar [appointments]="appointmentList"></app-appointment-calendar>
+  </ng-container>
+</div>

@@ -1,0 +1,31 @@
+<header>
+  <h2>{{ title }}</h2>
+</header>
+<ng-container *ngIf="!ls.isLoggedIn()">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        name="username"
+        [(ngModel)]="username"
+        id="username"
+        placeholder="Please enter your username"
+      />
+    </div>
+    <div class="form-control">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        id="password"
+        placeholder="Please enter your password"
+      />
+    </div>
+    <button type="submit" class="btn btn-block">Login</button>
+  </form>
+</ng-container>
+<ng-container *ngIf="ls.isLoggedIn()">
+  <button type="button" class="btn" (click)="onLogOutClick()">LogOut</button>
+</ng-container>

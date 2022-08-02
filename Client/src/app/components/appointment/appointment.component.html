@@ -1,0 +1,8 @@
+<div class="row appointment-container">
+  <app-add-appointment
+    (onAddAppointment)="addAppointment($event)"
+  ></app-add-appointment>
+  <app-appointment-display
+    [appointmentList]="appointmentList"
+  ></app-appointment-display>
+</div>

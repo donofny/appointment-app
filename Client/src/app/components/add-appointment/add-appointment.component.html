@@ -1,0 +1,46 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="appointmentName"> Name of the appointment</label>
+    <input
+      type="text"
+      name="appointmentName"
+      [(ngModel)]="name"
+      id="appointmentName"
+      placeholder="Please enter the name of your appointment"
+    />
+  </div>
+  <div class="form-control">
+    <label for="appointmentDescription"> Description</label>
+    <input
+      type="text"
+      name="appointmentDescription"
+      [(ngModel)]="description"
+      id="appointmentDescription"
+      placeholder="Please enter a description"
+    />
+  </div>
+  <div class="form-control">
+    <label for="appointmentDuration"> Duration in minutes</label>
+    <input
+      type="number"
+      name="appointmentDuration"
+      [(ngModel)]="duration"
+      id="appointmentDuration"
+      placeholder="Please enter a duration"
+    />
+  </div>
+  <div class="form-control">
+    <label for="appointmentStartTime"
+      >Please enter a start date in this format (Example: 8/19/2022, 11:00:00
+      PM)</label
+    >
+    <input
+      type="text"
+      name="appointmentStartTime"
+      [(ngModel)]="start"
+      id="appointmentStartTime"
+      placeholder="M/DD/YYYY, 11:00:00 PM"
+    />
+  </div>
+  <input type="submit" value="Save Appointment" class="block" />
+</form>
