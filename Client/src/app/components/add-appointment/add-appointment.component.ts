@@ -36,6 +36,10 @@ export class AddAppointmentComponent implements OnInit {
       alert('Input invalid');
       return;
     }
+    if(Object.prototype.toString.call(this.start) !== "[object Date]"){
+      alert('Please enter a valid date');
+      return;
+    }
     const model = {
       id: this.id,
       name: this.name,
