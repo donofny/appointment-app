@@ -1,8 +1,6 @@
 # appointment-app
 ## prerequisites
-npm
-node.js
-angular
+npm, node.js, angular
 
 Clone repository
 ```
