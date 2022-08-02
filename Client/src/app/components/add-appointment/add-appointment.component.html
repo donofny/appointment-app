@@ -31,15 +31,13 @@
   </div>
   <div class="form-control">
     <label for="appointmentStartTime"
-      >Please enter a start date in this format (Example: 8/19/2022, 11:00:00
-      PM)</label
+      >Please enter a start date</label
     >
     <input
-      type="text"
+      type="datetime-local"
       name="appointmentStartTime"
       [(ngModel)]="start"
       id="appointmentStartTime"
-      placeholder="M/DD/YYYY, 11:00:00 PM"
     />
   </div>
   <input type="submit" value="Save Appointment" class="block" />
