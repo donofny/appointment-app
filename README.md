@@ -26,6 +26,7 @@ browse http://localhost:4200
 To login and use the app, sign in using the following credentials:
 
 username: Bob
+
 password: BobPassword
 
 You may also sign in using any of the other listed accounts in the database.
