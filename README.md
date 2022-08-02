@@ -23,7 +23,7 @@ npm start
 
 browse http://localhost:4200
 
-For a smoother experience, sign in using
+For a smooth testing experience, sign in using
 
 username: Bob
 
