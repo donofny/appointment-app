@@ -22,3 +22,9 @@ npm start
 ```
 
 browse http://localhost:4200
+
+For a smoother experience, sign in using
+username: Bob
+password: BobPassword
+
+You may also sign in using any of the other listed accounts in the database.
