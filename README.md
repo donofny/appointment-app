@@ -1,4 +1,9 @@
 # appointment-app
+## prerequisites
+npm
+node.js
+angular
+
 Clone repository
 ```
 git clone https://github.com/donofny/appointment-app
