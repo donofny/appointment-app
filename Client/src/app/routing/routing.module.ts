@@ -4,6 +4,7 @@ import { HomeComponent } from '../components/home/home.component';
 import { AppointmentComponent } from '../components/appointment/appointment.component';
 import { LoggedinGuard } from '../loggedin.guard';
 import { EditAppointmentComponent } from '../components/edit-appointment/edit-appointment.component';
+import { NotFoundComponent } from '../components/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
     path: 'appointment/:id',
     canActivate: [LoggedinGuard],
     component: EditAppointmentComponent
+  },
+  {
+    path: 'not-found',
+    component: NotFoundComponent
   }
 ];
 

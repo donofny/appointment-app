@@ -1,3 +1,4 @@
+import { HttpErrorResponse, HttpStatusCode } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Appointment } from '../../appointments';
@@ -19,9 +20,17 @@ export class EditAppointmentComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const id = params['id'];
-      this.apptService
-        .getAppointment(id)
-        .subscribe((appointment) => (this.appointment = appointment));
+      this.apptService.getAppointment(id).subscribe({
+        next: (a) => (this.appointment = a),
+        error: (err) => {
+          if(err instanceof HttpErrorResponse){
+            if(err.status == HttpStatusCode.NotFound){
+              this.router.navigate(['/not-found']);
+            }
+          }
+        },
+        complete: () => console.log('get appointment request completed'),
+      });
     });
   }
   onEdit(app: Appointment) {

@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AuthInterceptor } from './auth.interceptor';
 import { EditAppointmentComponent } from './components/edit-appointment/edit-appointment.component';
 import { AppointmentCalendarComponent } from './components/appointment-calendar/appointment-calendar.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { AppointmentCalendarComponent } from './components/appointment-calendar/
     HomeComponent,
     EditAppointmentComponent,
     AppointmentCalendarComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

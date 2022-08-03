@@ -1,0 +1,33 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    box-sizing: border-box;
+    height: 70vh;
+    justify-content: center;
+  }
+  .party-starter {
+    background-color: teal;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color:white;
+    box-shadow: 0 2px 7px rgba(0,0,0, 0.6);
+    cursor: pointer;
+    outline: none;
+    transition: all 200ms;
+    margin: auto;
+    font-size: 18px;
+    margin-top: 25px;
+  }
+  
+  .party-starter:active {
+    box-shadow: 0 6px 14px rgba(0,0,0, 0.6);
+  }
+  .not-found-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  
