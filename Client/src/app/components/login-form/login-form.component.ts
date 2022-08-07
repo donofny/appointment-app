@@ -15,9 +15,6 @@ export class LoginFormComponent implements OnInit {
   password!: string;
   constructor(public ls: LoginService, private router: Router) {}
   ngOnInit(): void {}
-  toggleAddTask() {
-    console.log('toggle123');
-  }
 
   onSubmit() {
     this.ls
@@ -35,7 +32,6 @@ export class LoginFormComponent implements OnInit {
             return;
           }
         }
-        //console.log(r);
       });
   }
   onLogOutClick() {

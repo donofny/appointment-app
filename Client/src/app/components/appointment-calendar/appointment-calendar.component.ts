@@ -4,7 +4,6 @@ import {
   Input,
   OnChanges,
   OnInit,
-  Renderer2,
   SimpleChanges,
 } from '@angular/core';
 import { Router } from '@angular/router';
