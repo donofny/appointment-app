@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Appointment } from 'src/app/appointments';
 
 @Component({
@@ -32,9 +31,19 @@ export class AddAppointmentComponent implements OnInit {
     }
   }
   onSubmit() {
+    
+    var startDate = new Date(this.start);
+    var minDate = new Date();
+    minDate.setMinutes(minDate.getMinutes() - 3);
+
     if (!(this.name && this.description && this.duration && this.start)) {
       alert('Input invalid');
       return;
+    }
+    if(startDate.toLocaleString() == "Invalid Date" || Date.parse(startDate.toLocaleString()) < Date.parse(minDate.toLocaleString())){
+      alert('Please enter a valid start date');
+      return;
+      
     }
     const model = {
       id: this.id,
