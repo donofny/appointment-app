@@ -40,11 +40,19 @@ export class AddAppointmentComponent implements OnInit {
       alert('Input invalid');
       return;
     }
-    if(startDate.toLocaleString() == "Invalid Date" || Date.parse(startDate.toLocaleString()) < Date.parse(minDate.toLocaleString())){
+    else if(this.duration < 0){
+      alert('Invalid Duration: duration can not be a negative number');
+      return;
+    }
+    else if(this.duration > 1440){
+      alert('Invalid Duration: duration can not be longer than 24 hrs (1440 minutes)');
+      return;
+    }
+    else if(startDate.toLocaleString() == "Invalid Date" || Date.parse(startDate.toLocaleString()) < Date.parse(minDate.toLocaleString())){
       alert('Please enter a valid start date');
       return;
-      
     }
+
     const model = {
       id: this.id,
       name: this.name,
