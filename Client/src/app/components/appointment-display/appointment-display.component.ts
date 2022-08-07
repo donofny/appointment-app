@@ -27,6 +27,7 @@ export class AppointmentDisplayComponent implements OnInit {
             (a) => a.id !== appointment.id
           ))
       );
+      window.location.reload();
   }
   startFormat(appointment: Appointment) {
     var d = new Date(appointment.start);
